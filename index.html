@@ -26,8 +26,14 @@ function computerPlay(hand) {
   }
 }
 
+function makeLowerCase(myString) {
+  myString = myString.toLowerCase();
+  return myString;
+}
+
 function letsPlay(playerSelection, computerSelection) {
   playerSelection = prompt('What do you choose?');
+  playerSelection = makeLowerCase(playerSelection);
   computerSelection = computerPlay();
   return (playerSelection, computerSelection);
   if (playerSelection == computerSelection) {
