@@ -4,9 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Francisco's Rock-Paper-Scissors</title>
 </head>
 <body>
+<script>
+function computerPlay(hand) {
+  let n = Math.floor(Math.random() * 3);
+  switch (n) {
+    case 0:
+      hand = 'Rock';
+      return hand;
+      break;
+    case 1:
+      hand = 'Paper';
+      return hand;
+      break;
+    case 2:
+      hand = 'Scissors';
+      return hand;
+      break;
+  }
+}
 
+function letsPlay(playerSelection, computerSelection) {
+  playerSelection = prompt('What do you choose?');
+  computerSelection = computerPlay();
+  console.log(playerSelection);
+  console.log(computerSelection);
+}
+</script>
 </body>
 </html>
