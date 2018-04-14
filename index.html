@@ -29,9 +29,12 @@ function computerPlay(hand) {
 function letsPlay(playerSelection, computerSelection) {
   playerSelection = prompt('What do you choose?');
   computerSelection = computerPlay();
-  console.log(playerSelection);
-  console.log(computerSelection);
+  return (playerSelection, computerSelection);
+  if (playerSelection == computerSelection) {
+    let winner = 'DRAW';
+  }
 }
+
 </script>
 </body>
 </html>
