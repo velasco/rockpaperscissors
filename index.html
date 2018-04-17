@@ -31,14 +31,38 @@ function makeLowerCase(myString) {
   return myString;
 }
 
-function letsPlay(playerSelection, computerSelection) {
+function getWinner(playerSelection, computerSelection) {
+  if (playerSelection == "rock" && computerSelection == "scissors" || playerSelection == "scissors" && computerSelection == "paper" || playerSelection == "paper" && computerSelection == "rock") {
+  let winner ="human";
+  } else if (playerSelection == "scissors" && computerSelection == "rock" || playerSelection == "paper" && computerSelection == "scissors" || playerSelection == "rock" && computerSelection == "paper") {
+    let winner = "computer";
+  }
+  
+  return winner
+}
+
+function letsPlay(winner) {
   playerSelection = prompt('What do you choose?');
   playerSelection = makeLowerCase(playerSelection);
   computerSelection = computerPlay();
-  return (playerSelection, computerSelection);
-  if (playerSelection == computerSelection) {
-    let winner = 'DRAW';
-  }// TODO: Aufzählen in welchen Fällen der Computer / Player gewinnt!
+  var winner;
+  var computer;
+  var human;
+
+  if (computer > human) {
+    let winner = "Computer"}
+    else {
+      let winner = "Human";
+    }
+    return winner;
+  }
+
+function game() {
+  var i, winner
+  for (var i = 0; i < 5; i++) {
+    letsPlay(winner)
+  }
+  console.log(winner)
 }
 </script>
 </body>
