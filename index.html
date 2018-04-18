@@ -31,17 +31,26 @@ function computerPlay() {
 
 function humanPlay() {
   var playerSelection
+<<<<<<< HEAD
   while (playerSelection != ("rock" || "paper" || "scissors")) {
     playerSelection = prompt('What do you choose?');
     playerSelection = makeLowerCase(playerSelection);
 
+=======
+    playerSelection = prompt('What do you choose?');
+    playerSelection = makeLowerCase(playerSelection);
+    
+>>>>>>> 22f17f2305b82c6a2f9870c99906cbd137a75a61
     if (playerSelection == ("rock" || "paper" || "scissors")) {
       console.log("Ahh, " + playerSelection + ", that is a got choice!")
       return playerSelection}
     else {
       console.log("Please chose ROCK, PAPER or SCISSORS.")
     }
+<<<<<<< HEAD
   }
+=======
+>>>>>>> 22f17f2305b82c6a2f9870c99906cbd137a75a61
 }
 
 function makeLowerCase(myString) {
