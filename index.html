@@ -30,36 +30,41 @@ function computerPlay() {
 }
 
 function humanPlay() {
-  var playerSelection
-  while (playerSelection != ("rock" || "paper" || "scissors")) {
-    playerSelection = prompt('What do you choose?');
-    playerSelection = makeLowerCase(playerSelection);
-
-    if (playerSelection == ("rock" || "paper" || "scissors")) {
-      console.log("Ahh, " + playerSelection + ", that is a got choice!")
-      return playerSelection}
-    else {
-      console.log("Please chose ROCK, PAPER or SCISSORS.")
+  let playerSelection = "";
+  while (playerSelection != 'rock' || playerSelection != 'paper' || playerSelection != 'scissors') {
+    playerSelection = prompt('What do you choose?').toLowerCase();
+      if (playerSelection == "rock" || playerSelection == "paper" || playerSelection == "scissors") {
+        console.log("Ok, " + playerSelection + ", is a got choice!")
+        return playerSelection}
+      else {
+        console.log("Please chose ROCK, PAPER or SCISSORS.")
     }
   }
 }
 
-function makeLowerCase(myString) {
-  myString = myString.toLowerCase();
-  return myString;
-}
-
-function getWinner(humanPlay, computerPlay) {
+function getWinner() {
   let playerSelection = humanPlay();
   let computerSelection = computerPlay();
   console.log(playerSelection + computerSelection)
-  let winner =""
-  if (playerSelection == "rock" && computerSelection == "scissors" || playerSelection == "scissors" && computerSelection == "paper" || playerSelection == "paper" && computerSelection == "rock") {
-  let winner ="human";
-  } else if (playerSelection == "scissors" && computerSelection == "rock" || playerSelection == "paper" && computerSelection == "scissors" || playerSelection == "rock" && computerSelection == "paper") {
-    let winner = "computer";}
+  var winner
+      if (playerSelection == "rock" && computerSelection == "scissors" || playerSelection == "scissors" && computerSelection == "paper" || playerSelection == "paper" && computerSelection == "rock") {
+      winner = "human";
+    } else if (playerSelection == "scissors" && computerSelection == "rock" || playerSelection == "paper" && computerSelection == "scissors" || playerSelection == "rock" && computerSelection == "paper") {
+      winner = "computer";}
+      else if (playerSelection == playerSelection) {
+        winner = "DRAW";
+      }
+  console.log("The winner is " + winner);
   return winner;
+
 }
+
+function game() {
+  for (var i = 0; i < 5; i++) {
+
+  }
+}
+
 </script>
 </body>
 </html>
