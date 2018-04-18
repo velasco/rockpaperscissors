@@ -30,6 +30,7 @@ function computerPlay() {
 }
 
 function humanPlay() {
+<<<<<<< HEAD
   let playerSelection = "";
   while (playerSelection != 'rock' || playerSelection != 'paper' || playerSelection != 'scissors') {
     playerSelection = prompt('What do you choose?').toLowerCase();
@@ -40,6 +41,34 @@ function humanPlay() {
         console.log("Please chose ROCK, PAPER or SCISSORS.")
     }
   }
+=======
+  var playerSelection
+<<<<<<< HEAD
+  while (playerSelection != ("rock" || "paper" || "scissors")) {
+    playerSelection = prompt('What do you choose?');
+    playerSelection = makeLowerCase(playerSelection);
+
+=======
+    playerSelection = prompt('What do you choose?');
+    playerSelection = makeLowerCase(playerSelection);
+    
+>>>>>>> 22f17f2305b82c6a2f9870c99906cbd137a75a61
+    if (playerSelection == ("rock" || "paper" || "scissors")) {
+      console.log("Ahh, " + playerSelection + ", that is a got choice!")
+      return playerSelection}
+    else {
+      console.log("Please chose ROCK, PAPER or SCISSORS.")
+    }
+<<<<<<< HEAD
+  }
+=======
+>>>>>>> 22f17f2305b82c6a2f9870c99906cbd137a75a61
+}
+
+function makeLowerCase(myString) {
+  myString = myString.toLowerCase();
+  return myString;
+>>>>>>> af85dcdd63b79c406d91adff0f2a71bc02bc67a2
 }
 
 function getWinner() {
