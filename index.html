@@ -8,8 +8,10 @@
 </head>
 <body>
 <script>
-function computerPlay(hand) {
+
+function computerPlay() {
   let n = Math.floor(Math.random() * 3);
+  let hand =""
   switch (n) {
     case 0:
       hand = 'rock';
@@ -24,6 +26,20 @@ function computerPlay(hand) {
       return hand;
       break;
   }
+  console.log("Computer chose " + hand + "!");
+}
+
+function humanPlay() {
+  var playerSelection
+    playerSelection = prompt('What do you choose?');
+    playerSelection = makeLowerCase(playerSelection);
+    
+    if (playerSelection == ("rock" || "paper" || "scissors")) {
+      console.log("Ahh, " + playerSelection + ", that is a got choice!")
+      return playerSelection}
+    else {
+      console.log("Please chose ROCK, PAPER or SCISSORS.")
+    }
 }
 
 function makeLowerCase(myString) {
@@ -31,38 +47,16 @@ function makeLowerCase(myString) {
   return myString;
 }
 
-function getWinner(playerSelection, computerSelection) {
+function getWinner(humanPlay, computerPlay) {
+  let playerSelection = humanPlay();
+  let computerSelection = computerPlay();
+  console.log(playerSelection + computerSelection)
+  let winner =""
   if (playerSelection == "rock" && computerSelection == "scissors" || playerSelection == "scissors" && computerSelection == "paper" || playerSelection == "paper" && computerSelection == "rock") {
   let winner ="human";
   } else if (playerSelection == "scissors" && computerSelection == "rock" || playerSelection == "paper" && computerSelection == "scissors" || playerSelection == "rock" && computerSelection == "paper") {
-    let winner = "computer";
-  }
-  
-  return winner
-}
-
-function letsPlay(winner) {
-  playerSelection = prompt('What do you choose?');
-  playerSelection = makeLowerCase(playerSelection);
-  computerSelection = computerPlay();
-  var winner;
-  var computer;
-  var human;
-
-  if (computer > human) {
-    let winner = "Computer"}
-    else {
-      let winner = "Human";
-    }
-    return winner;
-  }
-
-function game() {
-  var i, winner
-  for (var i = 0; i < 5; i++) {
-    letsPlay(winner)
-  }
-  console.log(winner)
+    let winner = "computer";}
+  return winner;
 }
 </script>
 </body>
