@@ -30,16 +30,11 @@ function computerPlay() {
 }
 
 function humanPlay() {
-  let playerSelection = "";
-  while (playerSelection != 'rock' || playerSelection != 'paper' || playerSelection != 'scissors') {
-    playerSelection = prompt('What do you choose?').toLowerCase();
-      if (playerSelection == "rock" || playerSelection == "paper" || playerSelection == "scissors") {
-        console.log("Ok, " + playerSelection + ", is a got choice!")
-        return playerSelection}
-      else {
-        console.log("Please chose ROCK, PAPER or SCISSORS.")
+  let playerSelection = prompt('What do you choose ? ').toLowerCase();
+    while (playerSelection != 'rock' && playerSelection != 'paper' && playerSelection != 'scissors') {
+      playerSelection = prompt('What do you choose ? ').toLowerCase();
     }
-  }
+    return playerSelection;
 }
 
 function getWinner() {
